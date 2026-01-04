@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education - Portfolio</title>
+
+    <!-- Font Awesome (ikon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- Style utama (arahkan ke style.css Anda) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="animate-slideInDown">
+      <a href="index.html" class="logo">Pelya Silpyana</a>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html" class="active">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+    </header>
+
+    <main>
+      <section class="education section">
+        <div class="container">
+          <h1 class="section-title animate-fadeInUp animate-delay-1">
+            <i class="fa-solid fa-user-graduate"></i>
+            Education
+          </h1>
+
+          <div class="edu-timeline">
+            <article class="edu-item">
+              <div class="edu-badge">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="edu-content">
+                <h3 class="edu-title">UNPAM</h3>
+                <p class="edu-meta">S1 Informatika • 2023</p>
+                <ul class="edu-highlights">
+                  <li>Fokus pada Pemrograman Web, Basis Data, dan UI/UX.</li>
+                  <li>Skripsi: “Optimasi Performa SPA dengan teknik Code Splitting”.</li>
+                  <li>Organisasi: Himpunan Mahasiswa Informatika (Divisi Riset).</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="edu-item">
+              <div class="edu-badge">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <div class="edu-content">
+                <h3 class="edu-title">SMAN 16 Kabupaten Tangerang</h3>
+                <p class="edu-meta">Jurusan IPS • 2017–2020</p>
+                <ul class="edu-highlights">
+                  <li>Lulus dengan baik dan langsung bekerja setelah lulus.</li>
+                  <li>Memiliki dasar yang kuat dalam ilmu sosial dan kemampuan analisis.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Pelya Silpyana. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const nav = document.querySelector("nav");
+
+      mobileMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      // Animation initialization
+      document.addEventListener("DOMContentLoaded", function() {
+        // Add loaded class to body to trigger animations
+        document.body.classList.add('loaded');
+        
+        // Ensure all animated elements are visible
+        const animatedElements = document.querySelectorAll('[class*="animate-"]');
+        animatedElements.forEach(element => {
+          element.style.visibility = 'visible';
+        });
+      });
+    </script>
+  </body>
+</html>
