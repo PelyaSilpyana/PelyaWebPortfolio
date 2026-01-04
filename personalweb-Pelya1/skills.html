@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Skills - Pelya Silpyana</title>
+  </head>
+  <body>
+    <header class="animate-slideInDown">
+      <a href="#" class="logo">Pelya Silpyana</a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html" class="active">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="skills">
+      <h1 class="animate-fadeInUp animate-delay-1">My Skills</h1>
+      <div class="skill animate-fadeInLeft animate-delay-2">
+        <h2>HTML</h2>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill animate-fadeInLeft animate-delay-3">
+        <h2>CSS</h2>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill animate-fadeInLeft animate-delay-4">
+        <h2>JavaScript</h2>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 75%"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const nav = document.querySelector("nav");
+
+      mobileMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      // Animation initialization
+      document.addEventListener("DOMContentLoaded", function() {
+        // Add loaded class to body to trigger animations
+        document.body.classList.add('loaded');
+        
+        // Ensure all animated elements are visible
+        const animatedElements = document.querySelectorAll('[class*="animate-"]');
+        animatedElements.forEach(element => {
+          element.style.visibility = 'visible';
+        });
+      });
+    </script>
+  </body>
+</html>
